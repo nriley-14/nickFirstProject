@@ -7,3 +7,5 @@ date: '2022-04-11'
 #Question 1: An example where Two-Way ANOVA could be implemented is: Does the amount of octane in fuel (87, 89, 91) or type of transmission(automatic or manual) affect 0-60 accelaration times.
 
 #Octane amount(categorical), Transmission type(categorical binary), accelaration time(quantitative)
+
+#Question 2: The null hypothesis for the above example is if the population means are the same for amount of octane, type of transmission and when there is no interaction effect between the two.
