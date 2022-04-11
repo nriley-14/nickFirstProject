@@ -65,4 +65,9 @@ ggboxplot(mod_pitcher_df, x = "Year", y = "FIP", color = "Lg",
   labs(x = 'Year', y = 'FIP', title = 'Box Plot for One-Way ANOVA with means') +
   theme(plot.title = element_text(hjust = 0.5, face = 'bold', size = 15))
 ```
+```{r}
+ggline(mod_pitcher_df, x = "Year", y = "FIP", color = "Lg",
+       add = c("mean_se", "dotplot"),
+       palette = c("#00AFBB", "#E7B800"))
+```
 
