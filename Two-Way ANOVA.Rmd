@@ -1,0 +1,7 @@
+---
+title: "Two-Way ANOVA"
+output: html_document
+date: '2022-04-11'
+---
+
+#Question 1: An example where Two-Way ANOVA could be implemented is: Does the amount of octane in fuel (87, 89, 91) or type of transmission affect 0-60 accelaration times.
