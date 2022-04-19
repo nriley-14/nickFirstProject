@@ -71,3 +71,9 @@ ggline(mod_pitcher_df, x = "Year", y = "FIP", color = "Lg",
        palette = c("#00AFBB", "#E7B800"))
 ```
 
+
+```{r}
+model1 <- aov(FIP ~ Year + Lg, mod_pitcher_df)
+tidy(model1)
+```
+
