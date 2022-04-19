@@ -77,3 +77,10 @@ model1 <- aov(FIP ~ Year + Lg, mod_pitcher_df)
 tidy(model1)
 ```
 
+```{r}
+model2 <- aov(FIP ~ Year * Lg, mod_pitcher_df)
+tidy(model2)
+
+```
+
+
