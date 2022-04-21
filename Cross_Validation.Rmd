@@ -1,0 +1,50 @@
+---
+title: "Cross_Validation"
+output: html_document
+date: '2022-04-21'
+---
+
+```{r}
+library(tidyverse)
+library(caret)
+```
+
+
+```{r}
+iris %>%
+  ggplot(aes(x = Sepal.Length, y = Sepal.Width, color = Species)) +
+  geom_point() +
+  theme_bw()
+```
+
+```{r}
+trControl <- trainControl(method = "cv",
+number = 5)
+```
+
+```{r}
+mod_iris = iris %>%
+select(-contains('Sepal'))
+```
+
+
+```{r}
+fit <- train(Species ~ ., ## Species is the response variable
+method = "knn", ## Machine Learning Algorithm
+tuneGrid = expand.grid(k = 1:10), ## Number of different neighbors
+trControl = trControl, ## Define the type of cross validation
+metric = "Accuracy", ## The metric for performance
+data = iris ## The data set
+)
+
+fit
+```
+
+#Question 1: Higher numbers of neighbors caused the highest level of accuracy.
+
+#Question 2: The k value which had the highest level of accuracy is 22, however this does change as from test to test.
+
+#Question 3: The k value that had the highest level of accuracy is 10, however this does change as from test to test.
+
+#Question 4: The k value that has the highest level of accuracy is 5, however this does change as from test to test.
+
